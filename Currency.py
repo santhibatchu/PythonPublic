@@ -1,6 +1,6 @@
 import sys
-r = int(sys.argv[1])
- if ( isinstance(r, int)):
+try:
+    r = int(sys.argv[1])
     div = (r // 17)
     b = 2 *div
     temp = r - ( div * 17)
@@ -9,5 +9,7 @@ r = int(sys.argv[1])
     p = left_amount * 26
     result = str(b)+str(j)+str(p)
     print(result)
-  else:
+    
+except ValueError:
     print('000')
+    
